@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import Header from "./Header";
-import List from "./List";
+import Body from "./Body";
 
 //create your first component
 export function Home() {
@@ -14,16 +14,17 @@ export function Home() {
 
 	const addTask = details => {
 		setList([...list, details]);
-		console.log(details);
 	};
 
 	return (
-		<div className="container d-flex flex-column">
+		<div className="container">
 			<Header />
+
 			<h6 className="fw-light text-danger">
 				{error !== "" ? error : null}
 			</h6>
-			<List
+
+			<Body
 				updateError={updateError}
 				task={task}
 				setTask={setTask}
