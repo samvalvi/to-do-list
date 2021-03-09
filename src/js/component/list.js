@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function List({ list, deleteTask }) {
+export function List({ list, deleteTask }) {
 	return (
 		<ul className="list-group">
-			{list.map(element => (
-				<li className="list-group-item p-0" key={element.id}>
-					{console.log(element.tasKname)}
+			{list.map((task, index) => (
+				<li className="list-group-item p-0" key={index}>
+					{task}
 					<button className="btn" id="delete">
 						<i
 							className="fas fa-times"
-							onClick={() => deleteTask(element.id)}></i>
+							onClick={() => deleteTask(index)}></i>
 					</button>
 				</li>
 			))}
@@ -22,5 +22,3 @@ List.propTypes = {
 	list: PropTypes.array,
 	deleteTask: PropTypes.func
 };
-
-export default List;
