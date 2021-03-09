@@ -28,7 +28,7 @@ function Body({ updateError, task, setTask, list, setList, addTask }) {
 		//Reset error
 		updateError("");
 
-		//Id
+		//Create the Id
 		task.id = nanoid();
 
 		//Add task to list
@@ -54,15 +54,12 @@ function Body({ updateError, task, setTask, list, setList, addTask }) {
 			</form>
 
 			<div className="bg-white">
-				<ul className="list-group">
-					{list.map(element => (
-						<List
-							key={element.id}
-							element={element}
-							deleteTask={deleteTask}
-						/>
-					))}
-				</ul>
+				<List
+					key={task.id}
+					task={task}
+					list={list}
+					deleteTask={deleteTask}
+				/>
 			</div>
 
 			<div className="footer m-1">
