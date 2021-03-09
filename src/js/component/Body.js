@@ -54,13 +54,15 @@ function Body({ updateError, task, setTask, list, setList, addTask }) {
 			</form>
 
 			<div className="bg-white">
-				{list.map(element => (
-					<List
-						key={element.id}
-						element={element}
-						deleteTask={deleteTask}
-					/>
-				))}
+				<ul className="list-group">
+					{list.map(element => (
+						<List
+							key={element.id}
+							element={element}
+							deleteTask={deleteTask}
+						/>
+					))}
+				</ul>
 			</div>
 
 			<div className="footer m-1">
