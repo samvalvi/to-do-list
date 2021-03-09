@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { List } from "./list";
 import { Footer } from "./footer";
-import PropTypes from "prop-types";
 
 export function TodoList() {
 	const [list, setList] = useState([]);
@@ -64,13 +63,3 @@ export function TodoList() {
 		</div>
 	);
 }
-
-TodoList.propTypes = {
-	error: PropTypes.string,
-	updateError: PropTypes.func,
-	task: PropTypes.object,
-	setTask: PropTypes.func,
-	list: PropTypes.array,
-	setList: PropTypes.func,
-	addTask: PropTypes.func
-};
