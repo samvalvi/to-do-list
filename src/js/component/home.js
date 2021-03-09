@@ -25,7 +25,6 @@ export function Home() {
 			</h6>
 
 			<Body
-				error={error}
 				updateError={updateError}
 				task={task}
 				setTask={setTask}

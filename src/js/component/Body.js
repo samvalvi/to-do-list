@@ -3,7 +3,7 @@ import List from "./List";
 import PropTypes from "prop-types";
 import { nanoid } from "nanoid";
 
-function Body({ error, updateError, task, setTask, list, setList, addTask }) {
+function Body({ updateError, task, setTask, list, setList, addTask }) {
 	const { id, taskName } = task;
 
 	//Add the input value to task
