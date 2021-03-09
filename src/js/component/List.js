@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function List({ list, task, key, deleteTask }) {
+function List({ list, deleteTask }) {
 	return (
 		<ul className="list-group">
 			{list.map(element => (
@@ -20,8 +20,6 @@ function List({ list, task, key, deleteTask }) {
 
 List.propTypes = {
 	list: PropTypes.array,
-	task: PropTypes.object,
-	key: PropTypes.string,
 	deleteTask: PropTypes.func
 };
 
