@@ -20,11 +20,12 @@ export function Home() {
 		<div className="container">
 			<Header />
 
-			<h6 className="fw-light text-danger">
+			<h6 className="w-50 mx-auto fw-light text-danger">
 				{error !== "" ? error : null}
 			</h6>
 
 			<Body
+				error={error}
 				updateError={updateError}
 				task={task}
 				setTask={setTask}

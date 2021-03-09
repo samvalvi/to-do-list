@@ -3,7 +3,7 @@ import List from "./List";
 import PropTypes from "prop-types";
 import { nanoid } from "nanoid";
 
-function Body({ updateError, task, setTask, list, setList, addTask }) {
+function Body({ error, updateError, task, setTask, list, setList, addTask }) {
 	const { id, taskName } = task;
 
 	//Add the input value to task
@@ -21,7 +21,7 @@ function Body({ updateError, task, setTask, list, setList, addTask }) {
 		e.preventDefault();
 		//validation
 		if (taskName.trim() === "") {
-			updateError("Your task is empty.");
+			updateError("A task name is required");
 			return false;
 		}
 
@@ -75,6 +75,7 @@ function Body({ updateError, task, setTask, list, setList, addTask }) {
 }
 
 Body.propTypes = {
+	error: PropTypes.string,
 	updateError: PropTypes.func,
 	task: PropTypes.object,
 	setTask: PropTypes.func,
