@@ -4,12 +4,16 @@ import PropTypes from "prop-types";
 function List({ element, deleteTask }) {
 	return (
 		<div className="task">
-			<p>{element.tasKname}</p>
-			<button className="btn">
-				<i
-					className="fas fa-times"
-					onClick={() => deleteTask(element.id)}></i>
-			</button>
+			<ul className="list-group">
+				<li className="list-group-item p-0">
+					{element.tasKname}
+					<button className="btn">
+						<i
+							className="fas fa-times"
+							onClick={() => deleteTask(element.id)}></i>
+					</button>
+				</li>
+			</ul>
 		</div>
 	);
 }

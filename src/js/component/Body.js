@@ -6,10 +6,12 @@ import { nanoid } from "nanoid";
 function Body({ updateError, task, setTask, list, setList, addTask }) {
 	const { id, taskName } = task;
 
+	//Add the input value to task
 	const handleChange = e => {
 		setTask({ ...task, [e.target.name]: e.target.value });
 	};
 
+	//Delete the task
 	const deleteTask = id => {
 		const newTasks = list.filter(element => element.id !== id);
 		setList(newTasks);
