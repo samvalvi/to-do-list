@@ -7,7 +7,7 @@ function List({ element, deleteTask }) {
 			<ul className="list-group">
 				<li className="list-group-item p-0">
 					{element.tasKname}
-					<button className="btn">
+					<button className="btn" id="delete">
 						<i
 							className="fas fa-times"
 							onClick={() => deleteTask(element.id)}></i>
