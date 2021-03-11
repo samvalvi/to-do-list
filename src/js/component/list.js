@@ -5,8 +5,8 @@ export function List({ list, deleteTask }) {
 	return (
 		<ul className="list-group">
 			{list.map((task, index) => (
-				<li className="list-group-item p-0" key={index}>
-					{task}
+				<li className="list-group-item p-1" key={index}>
+					<p id="task">{task}</p>
 					<button className="btn" id="delete">
 						<i
 							className="fas fa-times"
